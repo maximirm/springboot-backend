@@ -15,12 +15,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
+
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
+@NoArgsConstructor
 @Table(name = "entries")
 public class Entry {
 
@@ -33,6 +32,9 @@ public class Entry {
     private String entry;
     private LocalDate creationDate;
 
-
-
+    public Entry(String headline, String entry) {
+        this.headline = headline;
+        this.entry = entry;
+        this.creationDate = LocalDate.now();
+    }
 }
