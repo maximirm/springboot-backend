@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDate;
 
+
 @SpringBootApplication
 public class SpringbootBackendApplication implements CommandLineRunner {
 
@@ -46,7 +47,7 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 				"Sixth Entry",
 				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
 
-
+		entry6.setCreationDate(LocalDate.of(2021,5,5));
 
 		entryRepository.save(entry1);
 		entryRepository.save(entry2);
