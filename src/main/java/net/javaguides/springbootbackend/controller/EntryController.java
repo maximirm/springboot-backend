@@ -43,7 +43,6 @@ public class EntryController {
                    entry.setEntry(updatedEntry.getEntry());
                    return this.entryRepository.save(entry);
                });
-
     }
 
     @PostMapping("/entries")
