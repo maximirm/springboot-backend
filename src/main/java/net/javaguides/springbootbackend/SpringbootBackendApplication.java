@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @SpringBootApplication
@@ -21,42 +22,89 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 	private EntryRepository entryRepository;
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) {
 
-		Entry entry1 = new Entry(
-				"First Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
+		entryRepository.saveAll(getEntries());
+	}
 
-		Entry entry2 = new Entry(
-				"Second Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
+	private List<Entry> getEntries() {
 
-		Entry entry3 = new Entry(
-				"Third Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
-
-		Entry entry4 = new Entry(
-				"Fourth Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
-
-		Entry entry5 = new Entry(
-				"Fifth Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
-
-		Entry entry6 = new Entry(
-				"Sixth Entry",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.");
-
-		entry6.setCreationDate(LocalDate.of(2021,5,5));
-
-		entryRepository.save(entry1);
-		entryRepository.save(entry2);
-		entryRepository.save(entry3);
-		entryRepository.save(entry4);
-		entryRepository.save(entry5);
-		entryRepository.save(entry6);
-
-
-
+		return List.of(
+				new Entry(
+						"First Entry",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2021,12,28)),
+				new Entry(
+						"Second Entry",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2021,12,29)),
+				new Entry(
+						"Third Entry",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2010,12,30)),
+				new Entry(
+						"Fourth Entry",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2021,12,31)),
+				new Entry(
+						"Fifth Entry",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,1)),
+				new Entry(
+						"Going to the cinema",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,2)),
+				new Entry(
+						"eating ice cream",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,3)),
+				new Entry(
+						"sunny day",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,12)),
+				new Entry(
+						"rainy day",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,13)),
+				new Entry(
+						"sports",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,14)),
+				new Entry(
+						"theatre",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,15)),
+				new Entry(
+						"music school",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,17)),
+				new Entry(
+						"drinking water",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,21)),
+				new Entry(
+						"sleeping",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,22)),
+				new Entry(
+						"eating food",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,23))
+		);
 	}
 }

@@ -3,6 +3,7 @@ package net.javaguides.springbootbackend.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
 @Table(name = "entries")
+@Accessors(chain = true)
 public class Entry {
 
 
