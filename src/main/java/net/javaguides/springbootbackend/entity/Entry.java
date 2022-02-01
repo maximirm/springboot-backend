@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
-
 @Getter
 @Setter
 @Entity
@@ -20,7 +19,6 @@ import java.time.LocalDate;
 @Table(name = "entries")
 @Accessors(chain = true)
 public class Entry {
-
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)

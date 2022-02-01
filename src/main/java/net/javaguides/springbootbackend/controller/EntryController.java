@@ -20,13 +20,12 @@ import java.util.List;
 @CrossOrigin
 public class EntryController {
 
-
     @Autowired
     private EntryRepository entryRepository;
 
     @GetMapping("/entries")
     public List<Entry> fetchEntries() {
-        return entryRepository.findAll();
+        return this.entryRepository.findAll();
     }
 
     @DeleteMapping("/entries/{entryId}")
@@ -47,8 +46,9 @@ public class EntryController {
 
     @PostMapping("/entries")
     public void postEntry(@RequestBody Entry newEntry) {
-        Entry entry1 = new Entry(newEntry.getHeadline(), newEntry.getEntry());
-
-        this.entryRepository.save(entry1);
+        this.entryRepository.save(new Entry(
+                newEntry.getHeadline(),
+                newEntry.getEntry()
+        ));
     }
 }
