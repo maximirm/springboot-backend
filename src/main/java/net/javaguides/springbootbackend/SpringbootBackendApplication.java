@@ -63,7 +63,47 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 						"eating ice cream",
 						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
 				)
-						.setCreationDate(LocalDate.of(2022,1,3))
+						.setCreationDate(LocalDate.of(2022,1,3)),
+				new Entry(
+						"sunny day",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,12)),
+				new Entry(
+						"rainy day",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,13)),
+				new Entry(
+						"sports",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,14)),
+				new Entry(
+						"theatre",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,15)),
+				new Entry(
+						"music school",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,17)),
+				new Entry(
+						"drinking water",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,21)),
+				new Entry(
+						"sleeping",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,22)),
+				new Entry(
+						"eating food",
+						"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+				)
+						.setCreationDate(LocalDate.of(2022,1,23))
 		);
 	}
 }
