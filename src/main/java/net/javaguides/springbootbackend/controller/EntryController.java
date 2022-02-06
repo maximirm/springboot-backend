@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,13 +33,13 @@ public class EntryController {
         this.entryRepository.deleteById(entryId);
     }
 
-    @PutMapping("/entries/{entryId}")
-    public void putEntry(@PathVariable("entryId") long entryId, @RequestBody Entry updatedEntry) {
+    @PatchMapping ("/entries/{entryId}")
+    public void patchEntry(@PathVariable("entryId") long entryId, @RequestBody Entry patchedEntry) {
 
        this.entryRepository.findById(entryId)
                .map(entry -> {
-                   entry.setHeadline(updatedEntry.getHeadline());
-                   entry.setEntry(updatedEntry.getEntry());
+                   entry.setHeadline(patchedEntry.getHeadline());
+                   entry.setEntry(patchedEntry.getEntry());
                    return this.entryRepository.save(entry);
                });
     }
